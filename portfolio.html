@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Fin Wrazej</title>
+    <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            overflow-y: auto;
+            background-color: #fff;
+            color: #000;
+            font-family: 'Futura PT', Arial, sans-serif;
+        }
+
+        .home-nav {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 10;
+        }
+
+        .home-nav a {
+            color: black;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .portfolio-container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px; /* Increased gap between portfolio items */
+            padding: 100px 20px;
+            box-sizing: border-box;
+            max-width: 1400px;
+            margin: auto;
+        }
+
+        .portfolio-item {
+            display: flex;
+            align-items: center; /* Center align the text with the video */
+            gap: 40px; /* Increased gap between video and text */
+            padding-bottom: 20px; /* Added padding at bottom */
+            border-bottom: 1px solid #f0f0f0; /* Subtle separator */
+        }
+
+        .portfolio-item iframe {
+            width: 560px;
+            height: 315px;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added subtle shadow */
+        }
+
+        .portfolio-text {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Center the text vertically */
+            max-width: 500px; /* Limit text width for better readability */
+        }
+
+        .portfolio-text h3 {
+            margin: 0 0 15px 0; /* Added bottom margin to title */
+            font-size: 2rem;
+            font-weight: normal;
+            font-style: italic;
+        }
+
+        .portfolio-text p {
+            margin: 0;
+            font-size: 1.1rem;
+            line-height: 1.5; /* Improved line height for readability */
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 1024px) {
+            .portfolio-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .portfolio-text {
+                margin-top: 20px;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="home-nav">
+        <a href="index.html">Home</a>
+    </nav>
+
+    <div class="portfolio-container">
+        <div class="portfolio-item">
+            <iframe src="https://player.vimeo.com/video/800568648?h=3f62f6776b" allowfullscreen></iframe>
+            <div class="portfolio-text">
+                <h3>Juno</h3>
+                <p>A powerful short about a soldier's search for his lost platoon in the aftermath of Normandy. Awarded Best In Show at the New York Alliance Film Festival.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <iframe src="https://player.vimeo.com/video/727988894?h=5e4df3e293" allowfullscreen></iframe>
+            <div class="portfolio-text">
+                <h3>A Story Less Known</h3>
+                <p>An insightful documentary exploring Jackson Pollock, his contemporaries, and the vibrant 1940s New York art scene. Silver Medal recipient at the New York Alliance Film Festival 2022.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <iframe src="https://player.vimeo.com/video/1053744368?h=fcc8b16007" allowfullscreen></iframe>
+            <div class="portfolio-text">
+                <h3>Hamilton & Camila</h3>
+                <p>A serene portrayal of Hamilton, a horse, and his caretaker Camila, on a peaceful morning in St. Andrews, set to Lou Reed's 'Perfect Day.'</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <iframe src="https://player.vimeo.com/video/1047239197?h=3c161d3809" allowfullscreen></iframe>
+            <div class="portfolio-text">
+                <h3>DONT WALK 24</h3>
+                <p>The DONT WALK 2024 Show. Co-directed and edited by Gabrielle Torreborre.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <iframe src="https://player.vimeo.com/video/1044840855" allowfullscreen></iframe>
+            <div class="portfolio-text">
+                <h3>Abandoned Montauk</h3>
+                <p>An exploration of Montauk's abandoned Hilda Lindley House, capturing its beauty and echoes of history alongside my friend Konrad.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <iframe src="https://player.vimeo.com/video/828821228" allowfullscreen></iframe>
+            <div class="portfolio-text">
+                <h3>Hope</h3>
+                <p>A motivational visual piece combining inspirational voiceovers and candid visuals of Manhattan, crafted to evoke hope and ambition.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <iframe src="https://player.vimeo.com/video/760877281" allowfullscreen></iframe>
+            <div class="portfolio-text">
+                <h3>Birds Aren't Real</h3>
+                <p>A short film capturing the humor and passion at a 'Birds Aren't Real' rally held in New York City, exploring this unique cultural phenomenon.</p>
+            </div>
+        </div>
+        <div class="portfolio-item">
+            <iframe src="https://player.vimeo.com/video/913774815" allowfullscreen></iframe>
+            <div class="portfolio-text">
+                <h3>Highlands</h3>
+                <p>A visual exploration of the raw beauty, rugged landscapes, and captivating atmosphere of the Scottish Highlands.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
