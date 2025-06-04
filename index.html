@@ -8,8 +8,14 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="fullscreen-bg">
-        <video class="fullscreen-bg__video" autoplay muted loop playsinline>
+    <div class="fullscreen-bg" style="background: #000;">
+        <video 
+            class="fullscreen-bg__video" 
+            autoplay 
+            muted 
+            loop 
+            playsinline
+        >
             <source src="videos/background.mp4" type="video/mp4">
         </video>
     </div>
@@ -22,21 +28,38 @@
             // Log when video starts playing
             video.addEventListener('playing', function() {
                 console.log('Video is now playing');
+                console.log('Video dimensions:', video.videoWidth, 'x', video.videoHeight);
+                console.log('Video duration:', video.duration);
             });
             
             // Log any errors
             video.addEventListener('error', function(e) {
                 console.error('Error with video:', video.error);
                 console.error('Video source:', video.currentSrc);
+                console.error('Error code:', video.error.code);
+                console.error('Error message:', video.error.message);
             });
 
             // Check if video loaded
             video.addEventListener('loadeddata', function() {
                 console.log('Video loaded successfully');
+                console.log('Ready state:', video.readyState);
+                console.log('Network state:', video.networkState);
             });
 
             // Force video reload
             video.load();
+            
+            // Try to play the video
+            const playPromise = video.play();
+            if (playPromise !== undefined) {
+                playPromise.then(_ => {
+                    console.log('Video playback started successfully');
+                })
+                .catch(error => {
+                    console.error('Video playback failed:', error);
+                });
+            }
         });
     </script>
     
