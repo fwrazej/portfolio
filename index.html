@@ -8,16 +8,16 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Video Background -->
-    <video id="background" autoplay muted loop playsinline>
-        <source src="videos/background.mp4" type="video/mp4">
-        Your browser does not support the video tag or the video failed to load.
-    </video>
+    <div class="fullscreen-bg">
+        <video class="fullscreen-bg__video" autoplay muted loop playsinline>
+            <source src="videos/background.mp4" type="video/mp4">
+        </video>
+    </div>
     
     <!-- Add debugging script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const video = document.getElementById('background');
+            const video = document.querySelector('.fullscreen-bg__video');
             
             // Log when video starts playing
             video.addEventListener('playing', function() {
