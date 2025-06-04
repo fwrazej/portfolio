@@ -138,10 +138,37 @@
 <body>
     <!-- Video Background -->
     <div class="video-background">
-        <video autoplay muted loop playsinline>
+        <video id="bgVideo" autoplay muted loop playsinline>
             <source src="videos/background.mp4" type="video/mp4">
+            Your browser does not support the video tag or the video failed to load.
         </video>
     </div>
+    
+    <!-- Add debugging script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.getElementById('bgVideo');
+            
+            // Log when video starts playing
+            video.addEventListener('playing', function() {
+                console.log('Video is now playing');
+            });
+            
+            // Log any errors
+            video.addEventListener('error', function(e) {
+                console.error('Error with video:', video.error);
+                console.error('Video source:', video.currentSrc);
+            });
+
+            // Check if video loaded
+            video.addEventListener('loadeddata', function() {
+                console.log('Video loaded successfully');
+            });
+
+            // Force video reload
+            video.load();
+        });
+    </script>
     
     <!-- Social Media Buttons -->
     <div class="social-buttons">
