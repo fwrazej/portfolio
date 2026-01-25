@@ -6,88 +6,95 @@
     <title>Portfolio | Fin Wrazej</title>
     <link href="https://fonts.cdnfonts.com/css/futura-pt" rel="stylesheet">
     <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            overflow-y: auto;
-            background-color: #fff;
-            color: #000;
-            font-family: 'Futura PT', Arial, sans-serif;
-        }
+    body, html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow-y: auto;
+        background-color: #fff;
+        color: #000;
+        font-family: 'Futura PT', Arial, sans-serif;
+    }
 
-        .home-nav {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 10;
-        }
+    .home-nav {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 10;
+    }
 
-        .home-nav a {
-            color: black;
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
+    .home-nav a {
+        color: black;
+        font-size: 1.2rem;
+        text-decoration: none;
+    }
 
+    /* === PORTFOLIO GRID === */
+    .portfolio-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px 40px;
+        padding: 100px 20px;
+        box-sizing: border-box;
+        max-width: 1400px;
+        margin: auto;
+    }
+
+    /* === PORTFOLIO ITEM CARD === */
+    .portfolio-item {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        border-bottom: none; /* remove divider */
+        padding-bottom: 0;
+    }
+
+    /* === VIDEO === */
+    .portfolio-item iframe {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+        border: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* === TEXT BELOW VIDEO === */
+    .portfolio-text {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 100%;
+    }
+
+    .portfolio-text h3 {
+        margin: 0;
+        font-size: 1.4rem;
+        font-weight: normal;
+        font-style: italic;
+    }
+
+    .portfolio-text p {
+        margin: 6px 0 0 0;
+        font-size: 1rem;
+        line-height: 1.45;
+        max-width: 95%;
+    }
+
+    /* === MOBILE: KEEP 2 COLUMNS === */
+    @media (max-width: 768px) {
         .portfolio-container {
-            display: flex;
-            flex-direction: column;
-            gap: 60px; /* Increased gap between portfolio items */
-            padding: 100px 20px;
-            box-sizing: border-box;
-            max-width: 1400px;
-            margin: auto;
-        }
-
-        .portfolio-item {
-            display: flex;
-            align-items: center; /* Center align the text with the video */
-            gap: 40px; /* Increased gap between video and text */
-            padding-bottom: 20px; /* Added padding at bottom */
-            border-bottom: 1px solid #f0f0f0; /* Subtle separator */
-        }
-
-        .portfolio-item iframe {
-            width: 560px;
-            height: 315px;
-            border: none;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Added subtle shadow */
-        }
-
-        .portfolio-text {
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center; /* Center the text vertically */
-            max-width: 500px; /* Limit text width for better readability */
+            gap: 40px 20px;
         }
 
         .portfolio-text h3 {
-            margin: 0 0 15px 0; /* Added bottom margin to title */
-            font-size: 2rem;
-            font-weight: normal;
-            font-style: italic;
+            font-size: 1.1rem;
         }
 
         .portfolio-text p {
-            margin: 0;
-            font-size: 1.1rem;
-            line-height: 1.5; /* Improved line height for readability */
+            font-size: 0.9rem;
         }
-
-        /* Responsive adjustments */
-        @media (max-width: 1024px) {
-            .portfolio-item {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .portfolio-text {
-                margin-top: 20px;
-                max-width: 100%;
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
     <nav class="home-nav">
