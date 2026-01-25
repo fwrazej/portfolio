@@ -29,6 +29,13 @@
         text-decoration: none;
     }
 
+    /* === PAGE HEADING === */
+    .page-title {
+        font-size: 2.4rem;
+        font-weight: bold;
+        margin: 0 0 40px 0;
+    }
+
     /* === PORTFOLIO GRID === */
     .portfolio-container {
         display: grid;
@@ -45,7 +52,7 @@
         grid-column: 1 / -1;
         font-size: 1.6rem;
         font-style: italic;
-        font-weight: normal;
+        font-weight: bold;
         margin: 40px 0 10px 0;
     }
 
@@ -82,7 +89,7 @@
         font-style: italic;
     }
 
-    /* (Paragraph styles kept for safety, even though you're no longer using <p>) */
+    /* (Kept for safety) */
     .portfolio-text p {
         margin: 6px 0 0 0;
         font-size: 1rem;
@@ -96,6 +103,10 @@
             gap: 40px 20px;
         }
 
+        .page-title {
+            font-size: 1.8rem;
+        }
+
         .portfolio-text h3 {
             font-size: 1.1rem;
         }
@@ -106,6 +117,7 @@
     }
 </style>
 
+
 </head>
 <body>
     <nav class="home-nav">
@@ -114,6 +126,9 @@
 
     
         <div class="portfolio-container">
+    
+    <h1 class="page-title">Portfolio</h1>
+
 
     <!-- SUPER 8 WORK -->
     <h2 class="portfolio-section">Super 8 Work</h2>
